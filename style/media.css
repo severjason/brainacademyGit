@@ -1,0 +1,18 @@
+@media all and (max-width: 740px) {
+
+    #wrapper {
+        display: block;
+    }
+
+    #news_navigation {
+        display: block;
+        width:100%;
+    }
+    #main_content:before {
+        clear: both;
+    }
+
+    #main_content {
+        width:100%;
+    }
+}
