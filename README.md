@@ -1,6 +1,3 @@
-# brainacademyGit
+# brainacademySever
 
-10. xxs text
-2. not ws line
-3. blsssah 
-4. 
+1. HTML and CSS lesson
