@@ -1,0 +1,86 @@
+.field {
+
+  .human {
+    position: absolute;
+    width: 25%;
+    height: 100px;
+    left: 0;
+    top: 0;
+
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    img {
+      margin: 0 auto;
+    }
+
+  }
+
+
+  position: relative;
+  height: 400px;
+  margin-top: 50px;
+  background: #bdc3c7;
+
+  &:hover .human {
+    animation-name: cartoon_human;
+  }
+
+  &:hover .mine {
+    animation-name: mine;
+  }
+
+  table {
+    width: 100%;
+    height: 100%;
+
+    td {
+      border: 1px solid #95a5a6;
+    }
+
+    .mine {
+      background: url("../images/boom.jpg") center no-repeat;
+      background-size: auto 100%;
+
+      animation-duration: 0.5s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+
+      opacity: 0;
+    }
+  }
+
+  @keyframes cartoon_human {
+    17%{
+      left:25%;
+      top:0;
+    }
+    34% {
+      left:25%;
+      top:25%;
+    }
+    51% {
+      left:50%;
+      top:25%;
+    }
+    68% {
+      left:50%;
+      top:75%;
+    }
+    85% {
+      left:75%;
+      top:75%;
+    }
+    100% {
+      left:75%;
+      top:25%;
+    }
+  }
+
+  @keyframes mine {
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+%defaultContainer {
+  background: $secondary_background;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+div#default {
+  @extend %defaultContainer;
+}
+
+div#main_content {
+  @extend %defaultContainer;
+
+  .my_row {
+    display: flex;
+  }
+}

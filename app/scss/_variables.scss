@@ -1,0 +1,25 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Bree+Serif|Merriweather);
+
+$font_main: "Merriweather", Helvetica, sans-serif;
+$font_highlight: "Bree Serif", Helvetica, sans-serif;
+
+// Dimensions
+
+// Radiuses
+
+$button_radius: 1px;
+$form_radius: 1px;
+
+// for my grid
+
+$my_columns:20 !default;
+$my_grid_gutter_width: 6px !default;
+
+
+
+$labyrinth_color:black;
+$labyrinth_border: 1px solid $labyrinth_color;
+
+$main_background:#edeef0;
+$secondary_background:white;

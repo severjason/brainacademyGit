@@ -1,0 +1,44 @@
+@mixin backImage($image,
+  $height:100vh,
+  $gradientStart:rgba(0,0,0,.2),
+  $gradientEnd:rgba(0,0,0,.5),
+  $backgroundPosition: 'center center') {
+
+  background:linear-gradient( to bottom, $gradientStart, $gradientEnd), url($image);
+  background-repeat: no-repeat;
+  background-position: $backgroundPosition;
+  background-size: cover;
+  height: 100vh;
+  max-height: $height;
+}
+
+
+@mixin blockToCenter {
+  margin: 0 auto;
+  //border: 1px solid black;
+}
+
+
+@mixin make_my_grid {
+  @for $i from 1 through $my_columns {
+    .col-my-#{$i} {
+      position: relative;
+      float: left;
+      width: percentage(($i / $my_columns));
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  ceil(($my_grid_gutter_width / 2));
+      padding-right: floor(($my_grid_gutter_width / 2));
+      margin-left:  ceil(($my_grid_gutter_width / 2));
+      margin-right: floor(($my_grid_gutter_width / 2));
+      word-wrap: break-word;
+      text-align: center;
+      border: 1px solid black;
+    }
+  }
+}
+
+//sprites
+@import "../images/png/*.png";
+@include all-png-sprites;

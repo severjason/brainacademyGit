@@ -1,0 +1,13 @@
+footer {
+  @include blockToCenter;
+  margin-top: 20rem;
+
+  div#contacts {
+    @include blockToCenter;
+  }
+
+  p.copyright {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

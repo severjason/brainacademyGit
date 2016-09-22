@@ -1,0 +1,33 @@
+
+#labyrinth_control{
+  margin-top: 50px;
+}
+#labyrinth {
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  margin: 50px auto 0;
+
+  .square {
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    //border: 1px solid white;
+    //padding: 1px;
+
+  }
+  .br_0 {
+    border-top: $labyrinth_border;
+  }
+  .br_1 {
+    border-bottom: $labyrinth_border;
+  }
+  .br_2 {
+    border-left: $labyrinth_border;
+  }
+  .br_3 {
+    border-right: $labyrinth_border;
+  }
+
+}
+

@@ -1,0 +1,34 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font_main;
+  background: $main_background;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+.my_row {
+  display: flex;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+}
+.max_width {
+  max-width: 960px;
+}
+@include make_my_grid;

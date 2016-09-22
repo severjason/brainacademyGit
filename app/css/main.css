@@ -1,0 +1,605 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Bree+Serif|Merriweather);
+/* line 200, ../images/png/*.png */
+.png-sprite, .png-apple, .png-box, .png-chain, .png-chrome, .png-coin, .png-dota, .png-faq, .png-firefox, .png-linkedin, .png-n, .png-nsf, .png-ok, .png-phone, .png-target, .png-teddy_bear, .png-thing, .png-twitter, .png-user, .png-w, .png-z {
+  background-image: url('../images/png-s4993fad92f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-apple {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-box {
+  background-position: 0 -56px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-chain {
+  background-position: 0 -112px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-chrome {
+  background-position: 0 -168px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-coin {
+  background-position: 0 -224px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-dota {
+  background-position: 0 -280px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-faq {
+  background-position: 0 -336px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-firefox {
+  background-position: 0 -392px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-linkedin {
+  background-position: 0 -448px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-n {
+  background-position: 0 -504px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-nsf {
+  background-position: 0 -560px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-ok {
+  background-position: 0 -616px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-phone {
+  background-position: 0 -672px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-target {
+  background-position: 0 -728px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-teddy_bear {
+  background-position: 0 -784px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-thing {
+  background-position: 0 -840px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-twitter {
+  background-position: 0 -896px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-user {
+  background-position: 0 -952px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-w {
+  background-position: 0 -1008px;
+}
+
+/* line 84, ../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.png-z {
+  background-position: 0 -1064px;
+}
+
+/* line 1, ../scss/_base.scss */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* line 6, ../scss/_base.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 10, ../scss/_base.scss */
+body {
+  font-size: 1.6rem;
+  font-family: "Merriweather", Helvetica, sans-serif;
+  background: #edeef0;
+}
+
+/* line 16, ../scss/_base.scss */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 21, ../scss/_base.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 24, ../scss/_base.scss */
+.my_row {
+  display: flex;
+  width: 100%;
+}
+
+/* line 28, ../scss/_base.scss */
+h2 {
+  text-align: center;
+}
+
+/* line 31, ../scss/_base.scss */
+.max_width {
+  max-width: 960px;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-1 {
+  position: relative;
+  float: left;
+  width: 5%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-2 {
+  position: relative;
+  float: left;
+  width: 10%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-3 {
+  position: relative;
+  float: left;
+  width: 15%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-4 {
+  position: relative;
+  float: left;
+  width: 20%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-5 {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-6 {
+  position: relative;
+  float: left;
+  width: 30%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-7 {
+  position: relative;
+  float: left;
+  width: 35%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-8 {
+  position: relative;
+  float: left;
+  width: 40%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-9 {
+  position: relative;
+  float: left;
+  width: 45%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-10 {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-11 {
+  position: relative;
+  float: left;
+  width: 55%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-12 {
+  position: relative;
+  float: left;
+  width: 60%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-13 {
+  position: relative;
+  float: left;
+  width: 65%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-14 {
+  position: relative;
+  float: left;
+  width: 70%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-15 {
+  position: relative;
+  float: left;
+  width: 75%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-16 {
+  position: relative;
+  float: left;
+  width: 80%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-17 {
+  position: relative;
+  float: left;
+  width: 85%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-18 {
+  position: relative;
+  float: left;
+  width: 90%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-19 {
+  position: relative;
+  float: left;
+  width: 95%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 24, ../scss/_mixins.scss */
+.col-my-20 {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  word-wrap: break-word;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/* line 1, ../scss/modules/_header.scss */
+header {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* line 1, ../scss/modules/_sections.scss */
+div#default, div#main_content {
+  background: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+/* line 15, ../scss/modules/_sections.scss */
+div#main_content .my_row {
+  display: flex;
+}
+
+/* line 3, ../scss/modules/_navigation.scss */
+nav .nav-tabs > li.active > a {
+  background: white;
+  border-radius: 1px;
+}
+
+/* line 1, ../scss/modules/_footer.scss */
+footer {
+  margin: 0 auto;
+  margin-top: 20rem;
+}
+/* line 5, ../scss/modules/_footer.scss */
+footer div#contacts {
+  margin: 0 auto;
+}
+/* line 9, ../scss/modules/_footer.scss */
+footer p.copyright {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* line 1, ../scss/modules/_animation.scss */
+.field {
+  position: relative;
+  height: 400px;
+  margin-top: 50px;
+  background: #bdc3c7;
+}
+/* line 3, ../scss/modules/_animation.scss */
+.field .human {
+  position: absolute;
+  width: 25%;
+  height: 100px;
+  left: 0;
+  top: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+/* line 14, ../scss/modules/_animation.scss */
+.field .human img {
+  margin: 0 auto;
+}
+/* line 26, ../scss/modules/_animation.scss */
+.field:hover .human {
+  animation-name: cartoon_human;
+}
+/* line 30, ../scss/modules/_animation.scss */
+.field:hover .mine {
+  animation-name: mine;
+}
+/* line 34, ../scss/modules/_animation.scss */
+.field table {
+  width: 100%;
+  height: 100%;
+}
+/* line 38, ../scss/modules/_animation.scss */
+.field table td {
+  border: 1px solid #95a5a6;
+}
+/* line 42, ../scss/modules/_animation.scss */
+.field table .mine {
+  background: url("../images/boom.jpg") center no-repeat;
+  background-size: auto 100%;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes cartoon_human {
+  17% {
+    left: 25%;
+    top: 0;
+  }
+  34% {
+    left: 25%;
+    top: 25%;
+  }
+  51% {
+    left: 50%;
+    top: 25%;
+  }
+  68% {
+    left: 50%;
+    top: 75%;
+  }
+  85% {
+    left: 75%;
+    top: 75%;
+  }
+  100% {
+    left: 75%;
+    top: 25%;
+  }
+}
+@keyframes mine {
+  100% {
+    opacity: 1;
+  }
+}
+/* line 2, ../scss/modules/_labyrinth.scss */
+#labyrinth_control {
+  margin-top: 50px;
+}
+
+/* line 5, ../scss/modules/_labyrinth.scss */
+#labyrinth {
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  margin: 50px auto 0;
+}
+/* line 11, ../scss/modules/_labyrinth.scss */
+#labyrinth .square {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 19, ../scss/modules/_labyrinth.scss */
+#labyrinth .br_0 {
+  border-top: 1px solid black;
+}
+/* line 22, ../scss/modules/_labyrinth.scss */
+#labyrinth .br_1 {
+  border-bottom: 1px solid black;
+}
+/* line 25, ../scss/modules/_labyrinth.scss */
+#labyrinth .br_2 {
+  border-left: 1px solid black;
+}
+/* line 28, ../scss/modules/_labyrinth.scss */
+#labyrinth .br_3 {
+  border-right: 1px solid black;
+}
