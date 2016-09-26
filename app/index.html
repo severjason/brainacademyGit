@@ -26,7 +26,7 @@
 
 
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -37,44 +37,45 @@
 <nav class="container container-fluid max_width">
     <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="#">Main</a></li>
+        <li data-page="animation" role="presentation"><a href="#">Animation</a></li>
         <li data-page="labyrinth" role="presentation"><a href="#">Labyrinth</a></li>
         <li data-page="compass" role="presentation"><a href="#">Grid and sprites</a></li>
     </ul>
 </nav>
 <div id="default">
+   <!-- <ul class="flex-container">
 
+        <li class="flex-item">1</li>
 
-    <div class="field">
-        <div class="human">
-            <img src="images/stan.png">
-        </div>
-        <table>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="mine"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td ></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
+        <li class="flex-item">2</li>
+
+        <li class="flex-item">3</li>
+
+        <li class="flex-item">4</li>
+
+        <li class="flex-item">5</li>
+
+        <li class="flex-item">6</li>
+
+    </ul>-->
+    <div id="labyrinth_control" class="container container-fluid text-center">
+        <label>
+            <span> Labyrinth level </span>
+            <select id="labyrinth_level" class="form-control">
+                <option data-level="5">Low</option>
+                <option data-level="40">Normal</option>
+                <option data-level="60">High</option>
+            </select>
+        </label>
+        <button id="generate" class="btn btn-default">Generate</button>
     </div>
+
+
+    <div id="labyrinth">
+    </div>
+
+
+
 </div>
 <div id="main_content">
 
