@@ -470,11 +470,17 @@ div#default, div#main_content {
 }
 
 /* line 15, ../scss/modules/_sections.scss */
+div#main_content .ajaxInfo {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 21, ../scss/modules/_sections.scss */
 div#main_content .my_row {
   display: flex;
 }
 
-/* line 20, ../scss/modules/_sections.scss */
+/* line 26, ../scss/modules/_sections.scss */
 .flex-container {
   padding: 0;
   margin: 0;
@@ -488,7 +494,7 @@ div#main_content .my_row {
   justify-content: space-around;
 }
 
-/* line 34, ../scss/modules/_sections.scss */
+/* line 40, ../scss/modules/_sections.scss */
 .flex-item {
   background: tomato;
   padding: 5px;

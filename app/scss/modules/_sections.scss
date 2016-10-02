@@ -12,6 +12,12 @@ div#default {
 div#main_content {
   @extend %defaultContainer;
 
+  .ajaxInfo {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .my_row {
     display: flex;
   }
