@@ -8,32 +8,16 @@
             //this.navLink = document.querySelectorAll("ul.nav-tabs > li");
             let quantityPerSide = 20;
             this.random = function (min, max, exclude = false) {
-                let rand = min - 0.5 + Math.random() * (max - min + 1);
-                rand = Math.round(Math.abs(rand));
+                let rand = Math.floor(min + Math.random() * (max - min + 1));
                 while (exclude === rand) {
-                    rand = min - 0.5 + Math.random() * (max - min + 1);
-                    rand = Math.round(Math.abs(rand));
+                    rand = Math.floor(min + Math.random() * (max - min + 1));
                 }
+                
                 return rand;
             };
             this.getClass = function (number) {
-                switch (number) {
-                    case 0:
-                        return "top ";
-                        break;
-                    case 1:
-                        return "bottom ";
-                        break;
-                    case 2:
-                        return "left ";
-                        break;
-                    case 3:
-                        return "right ";
-                        break;
-                    default:
-                        return "empty ";
-                        break;
-                }
+                let classes = ["top ", "bottom ", "left ", "right "];
+                return (number >=0 && number <= 3) ? classes[number] : "empty ";
             };
             this.generate = function () {
                 let labID = document.getElementById("labyrinth");
@@ -42,8 +26,12 @@
                 quantityPerSide = document.querySelector("#labyrinth_level option:checked").dataset.level;
 
                 createLabArray();
-
+                //console.table(labArray);
+                fixLabArray();
+                //console.table(labArray);
                 for (let i = 0; i < quantityPerSide; i++) {
+
+                    //let newTr = document.createElement("tr");
 
                     for (let j = 0; j < quantityPerSide; j++) {
 
@@ -54,15 +42,17 @@
                         let CSS = {
                             "width": Math.floor(labWidth / quantityPerSide) + "px",
                             "height": Math.floor(labWidth / quantityPerSide) + "px"
+                       /*     "marginTop": - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
+                            "marginRight": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px",
+                            "marginBottom":  - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
+                            "marginLeft": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px"*/
                         };
-
                         for (let attribute in CSS) {
 
                             if (CSS.hasOwnProperty(attribute)) {
                                 newDiv.style[attribute] = CSS[attribute];
                             }
                         }
-
                         labID.appendChild(newDiv);
                     }
                 }
@@ -114,8 +104,8 @@
                     let topLineSwitcher = 0;
                     for (let j = 0; j < quantityPerSide; j++) {
                         let newElement = labyrinth.getClass(labyrinth.random(0, 3));
-
-                        if (i === 0) {
+                        row.push(newElement);
+                        /*if (i === 0) {
 
                             if (j === 0) {
                                 row.push(labyrinth.getClass(0) + labyrinth.getClass(2));
@@ -124,7 +114,7 @@
                                 row.push(labyrinth.getClass(0) + labyrinth.getClass(3));
                             }
                             else {
-                                /* if (newElement !== labyrinth.getClass(0)) {
+                                /!* if (newElement !== labyrinth.getClass(0)) {
                                  topLineSwitcher++;
                                  }
                                  console.log(topLineSwitcher);
@@ -133,7 +123,7 @@
                                  }
                                  else {
                                  row.push(labyrinth.getClass(0));
-                                 }*/
+                                 }*!/
                                 row.push(labyrinth.getClass(labyrinth.random(1, 3)));
                             }
                         }
@@ -156,26 +146,58 @@
                         else {
                             row.push(newElement);
                         }
-
+*/
                     }
                     labArray.push(row);
                     row = [];
                 }
             };
+
+            let fixLabArray = function () {
+
+                for (let i = 0; i < quantityPerSide; i++) {
+
+                    for (let j = 0; j < quantityPerSide; j++) {
+                        //console.log(labArray[i-1][j] === labyrinth.getClass(1));
+                        if (i > 0 && labArray[i-1][j] === labyrinth.getClass(1) && labArray[i][j] === labyrinth.getClass(0)) {
+                            labArray[i-1][j] = labyrinth.getClass(labyrinth.random(2, 3));
+                        }
+                    }
+                }
+
+                for (let i = 0; i < quantityPerSide; i++) {
+
+                    for (let j = 0; j < quantityPerSide; j++) {
+
+                        if (j > 0 && labArray[i][j-1] === labyrinth.getClass(3) && labArray[i][j] === labyrinth.getClass(2)) {
+                            labArray[i][j-1] = labyrinth.getClass(100);
+                        }
+                    }
+                }
+            }
         };
 
+        document.querySelector("body").addEventListener("click", function (event) {
 
-        document.querySelector("#labyrinth_level").addEventListener("change", function () {
-            labyrinth.generate();
+            if (event.target.id === "generate") {
+                labyrinth.generate();
+            }
+
         });
 
-        document.querySelector("button#generate").addEventListener("click", function () {
-            labyrinth.generate();
+        document.querySelector("body").addEventListener("change", function (event) {
+
+            if (event.target.id === "labyrinth_level") {
+                labyrinth.generate();
+            }
+
         });
+
 
         document.querySelectorAll("ul.nav-tabs li").forEach(function (li) {
 
             li.addEventListener("click", function () {
+
                 document.querySelectorAll("nav li").forEach(function (li) {
                     li.classList.remove("active")
                 });
@@ -199,6 +221,7 @@
         });
         
     });
+
 
 
 })();
