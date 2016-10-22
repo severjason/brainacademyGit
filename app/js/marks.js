@@ -3,9 +3,6 @@
     
     let students = {};
 
-
-
-
     let studentsNames = "";
 
     let subjects = ["Math", "Physics", "Literature"];
@@ -137,9 +134,7 @@
         
     };
 
-
     document.querySelector("body").addEventListener("click", function (event) {
-
 
         if (event.target.id === "students_names_button") {
 
@@ -150,8 +145,6 @@
                 generateStudentsMarks(studentNamesInput);
 
                 document.getElementById("students_names").style.display = 'none';
-
-
 
             }
         }
