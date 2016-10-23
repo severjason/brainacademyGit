@@ -960,3 +960,39 @@ footer p.copyright {
 #labyrinth .right {
   border-right: 1px solid black;
 }
+
+/* line 1, ../scss/modules/_marks.scss */
+#students_marks {
+  max-width: 600px;
+  margin: 50px auto 0;
+}
+/* line 5, ../scss/modules/_marks.scss */
+#students_marks table {
+  text-align: center;
+  border: 1px solid #efefef;
+}
+/* line 9, ../scss/modules/_marks.scss */
+#students_marks table td {
+  padding: 5px;
+  border: 1px solid #efefef;
+}
+/* line 14, ../scss/modules/_marks.scss */
+#students_marks table td.failed {
+  color: red;
+}
+/* line 20, ../scss/modules/_marks.scss */
+#students_marks label {
+  font-weight: normal;
+}
+/* line 24, ../scss/modules/_marks.scss */
+#students_marks #marks .student_name_form {
+  padding-top: 20px;
+}
+/* line 27, ../scss/modules/_marks.scss */
+#students_marks #marks .student_name_form .student_name {
+  padding-bottom: 5px;
+}
+/* line 32, ../scss/modules/_marks.scss */
+#students_marks #marks button {
+  margin-top: 20px;
+}
