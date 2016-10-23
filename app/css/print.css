@@ -1,6 +1,1 @@
-@media print {
-  /* line 5, ../scss/print.scss */
-  header, nav#news_navigation, footer, .comment_field {
-    display: none !important;
-  }
-}
+@media print{header,nav#news_navigation,footer,.comment_field{display:none !important}}
