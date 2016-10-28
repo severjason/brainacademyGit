@@ -1,4 +1,5 @@
 "use strict";
+
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -12,12 +13,12 @@
                 while (exclude === rand) {
                     rand = Math.floor(min + Math.random() * (max - min + 1));
                 }
-                
+
                 return rand;
             };
             this.getClass = function (number) {
                 let classes = ["top ", "bottom ", "left ", "right "];
-                return (number >=0 && number <= 3) ? classes[number] : "empty ";
+                return number >= 0 && number <= 3 ? classes[number] : "empty ";
             };
             this.generate = function () {
                 let labID = document.getElementById("labyrinth");
@@ -42,10 +43,10 @@
                         let CSS = {
                             "width": Math.floor(labWidth / quantityPerSide) + "px",
                             "height": Math.floor(labWidth / quantityPerSide) + "px"
-                       /*     "marginTop": - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
-                            "marginRight": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px",
-                            "marginBottom":  - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
-                            "marginLeft": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px"*/
+                            /*     "marginTop": - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
+                                 "marginRight": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px",
+                                 "marginBottom":  - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
+                                 "marginLeft": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px"*/
                         };
                         for (let attribute in CSS) {
 
@@ -87,7 +88,6 @@
 
                     request.send(null);
                 }
-
             };
             let createLabArray = function () {
                 labArray = [];
@@ -106,8 +106,7 @@
                         let newElement = labyrinth.getClass(labyrinth.random(0, 3));
                         row.push(newElement);
                         /*if (i === 0) {
-
-                            if (j === 0) {
+                             if (j === 0) {
                                 row.push(labyrinth.getClass(0) + labyrinth.getClass(2));
                             }
                             else if (j === quantityPerSide - 1) {
@@ -146,7 +145,7 @@
                         else {
                             row.push(newElement);
                         }
-*/
+                        */
                     }
                     labArray.push(row);
                     row = [];
@@ -159,8 +158,8 @@
 
                     for (let j = 0; j < quantityPerSide; j++) {
                         //console.log(labArray[i-1][j] === labyrinth.getClass(1));
-                        if (i > 0 && labArray[i-1][j] === labyrinth.getClass(1) && labArray[i][j] === labyrinth.getClass(0)) {
-                            labArray[i-1][j] = labyrinth.getClass(labyrinth.random(2, 3));
+                        if (i > 0 && labArray[i - 1][j] === labyrinth.getClass(1) && labArray[i][j] === labyrinth.getClass(0)) {
+                            labArray[i - 1][j] = labyrinth.getClass(labyrinth.random(2, 3));
                         }
                     }
                 }
@@ -169,39 +168,34 @@
 
                     for (let j = 0; j < quantityPerSide; j++) {
 
-                        if (j > 0 && labArray[i][j-1] === labyrinth.getClass(3) && labArray[i][j] === labyrinth.getClass(2)) {
-                            labArray[i][j-1] = labyrinth.getClass(100);
+                        if (j > 0 && labArray[i][j - 1] === labyrinth.getClass(3) && labArray[i][j] === labyrinth.getClass(2)) {
+                            labArray[i][j - 1] = labyrinth.getClass(100);
                         }
                     }
                 }
-            }
-        };
+            };
+        }();
 
         document.querySelector("body").addEventListener("click", function (event) {
 
             if (event.target.id === "generate") {
                 labyrinth.generate();
             }
-
         });
-
-     
 
         document.querySelector("body").addEventListener("change", function (event) {
 
             if (event.target.id === "labyrinth_level") {
                 labyrinth.generate();
             }
-
         });
-
 
         document.querySelectorAll("ul.nav-tabs li").forEach(function (li) {
 
             li.addEventListener("click", function () {
 
                 document.querySelectorAll("nav li").forEach(function (li) {
-                    li.classList.remove("active")
+                    li.classList.remove("active");
                 });
 
                 this.classList.add("active");
@@ -213,17 +207,13 @@
                 if (page != undefined) {
                     defDiv.style.display = "none";
                     labyrinth.ajaxLoad(page);
-                }
-                else {
+                } else {
                     document.getElementById("main_content").innerHTML = "";
                     defDiv.style.display = "block";
                 }
-
-            })
+            });
         });
-        
     });
-
-
-
 })();
+
+//# sourceMappingURL=main-compiled.js.map
