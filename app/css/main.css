@@ -1,72 +1,596 @@
-/*
-Error: Invalid CSS after "@": expected identifier, was "/include all-pn..."
-        on line 44 of /home/sever/www/test.loc/public/app/scss/_mixins.scss
-        from line 14 of /home/sever/www/test.loc/public/app/scss/main.scss
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Bree+Serif|Merriweather);
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
 
-39:   }
-40: }
-41: 
-42: //sprites
-43: //@import "../images/png/*.png";
-44: @/include all-png-sprites;
+*, *:before, *:after {
+  box-sizing: inherit; }
 
-Backtrace:
-/home/sever/www/test.loc/public/app/scss/_mixins.scss:44
-/home/sever/www/test.loc/public/app/scss/main.scss:14
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:194:in `directive'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
-/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/var/lib/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/var/lib/gems/2.3.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/local/bin/compass:22:in `load'
-/usr/local/bin/compass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"@\": expected identifier, was \"/include all-pn...\"\A         on line 44 of /home/sever/www/test.loc/public/app/scss/_mixins.scss\A         from line 14 of /home/sever/www/test.loc/public/app/scss/main.scss\A \A 39:   }\A 40: }\A 41: \A 42: //sprites\A 43: //@import \"../images/png/*.png\";\A 44: @/include all-png-sprites;"; }
+body {
+  font-size: 1.6rem;
+  font-family: "Merriweather",Helvetica,sans-serif;
+  background: #edeef0; }
+
+img {
+  max-width: 100%; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+.my_row {
+  display: flex;
+  width: 100%; }
+
+h2 {
+  text-align: center; }
+
+.max_width {
+  max-width: 960px; }
+
+.clear {
+  clear: both; }
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.noselect::selection {
+  background: transparent; }
+
+header {
+  margin: 0 auto;
+  margin-bottom: 2rem; }
+
+div#default, div#main_content {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto; }
+
+div#main_content .ajaxInfo {
+  display: block;
+  text-align: center;
+  margin: 0 auto; }
+
+div#main_content .my_row {
+  display: flex; }
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; }
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center; }
+
+nav .nav-tabs > li.active > a {
+  background: #fff;
+  border-radius: 1px; }
+
+footer {
+  margin: 0 auto;
+  margin-top: 20rem; }
+
+footer div#contacts {
+  margin: 0 auto; }
+
+footer p.copyright {
+  margin-top: 1rem;
+  text-align: center; }
+
+.space_wrap {
+  padding: 50px;
+  background: url("../images/space_texture.png") center; }
+
+.space_wrap:hover .space_ship {
+  animation-name: cartoon_space_ship_move; }
+
+.space_wrap:hover .bad_space_ship {
+  animation-name: cartoon_bad_space_ship_move; }
+
+.space_wrap:hover .missile {
+  animation-name: cartoon_missile; }
+
+.space_wrap:hover .energy_shot.shot_1 {
+  animation-name: cartoon_energy_shot_1; }
+
+.space_wrap:hover .energy_shot.shot_2 {
+  animation-name: cartoon_energy_shot_2; }
+
+.space_wrap:hover .energy_shot.shot_3 {
+  animation-name: cartoon_energy_shot_3; }
+
+.space_wrap:hover .boom_large {
+  animation-name: cartoon_boom_large; }
+
+.space {
+  margin: 50px auto;
+  position: relative;
+  height: 400px; }
+
+.space img {
+  max-height: 100%;
+  margin: 0 auto; }
+
+.space .missile {
+  position: absolute;
+  width: 10%;
+  height: 20px;
+  left: 20%;
+  top: 22.5%;
+  opacity: 0;
+  animation-duration: 1.2s;
+  animation-delay: 8.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; }
+
+.space .bad_space_ship {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -320px;
+  top: 0;
+  animation-duration: 17s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+.space .space_ship {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: -200px;
+  top: 0;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+.space .boom {
+  position: absolute;
+  left: 70%;
+  top: 20%;
+  opacity: 0;
+  animation-delay: 9.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; }
+
+.space .boom_large {
+  left: 70%;
+  top: 20%;
+  width: 10%;
+  height: 10%;
+  animation-duration: 5s; }
+
+.space .energy_shot {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  opacity: 0;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; }
+
+.space .energy_shot.energy_shot.shot_1 {
+  top: 0;
+  left: 90%;
+  animation-duration: .5s;
+  animation-delay: 2s; }
+
+.space .energy_shot.energy_shot.shot_2 {
+  top: 80%;
+  left: 90%;
+  animation-duration: 1s;
+  animation-delay: 3.3s; }
+
+.space .energy_shot.energy_shot.shot_3 {
+  top: 10%;
+  left: 10%;
+  animation-duration: 1s;
+  animation-delay: 5.5s; }
+
+.space table {
+  width: 100%;
+  height: 100%; }
+
+.space table td {
+  border: 1px solid #95a5a6; }
+
+@keyframes cartoon_space_ship_move {
+  11% {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: 90%;
+    top: 0; }
+  22% {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: 90%;
+    top: 90%; }
+  33% {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    left: 10%;
+    top: 90%; }
+  44% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    left: 10%;
+    top: 10%; }
+  55% {
+    -ms-transform: rotate(450deg);
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+    left: 70%;
+    top: 10%; }
+  66% {
+    -ms-transform: rotate(570deg);
+    -webkit-transform: rotate(570deg);
+    transform: rotate(570deg);
+    left: 70%;
+    top: 60%; }
+  77% {
+    -ms-transform: rotate(570deg);
+    -webkit-transform: rotate(570deg);
+    transform: rotate(570deg);
+    left: 20%;
+    top: 20%; }
+  88% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 20%;
+    top: 20%;
+    opacity: 1; }
+  100% {
+    -ms-transform: rotate(855deg);
+    -webkit-transform: rotate(855deg);
+    transform: rotate(855deg);
+    left: -10%;
+    top: 100%;
+    opacity: 0; } }
+
+@keyframes cartoon_bad_space_ship_move {
+  11% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    left: 90%;
+    top: 0; }
+  22% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 90%;
+    top: 80%; }
+  33% {
+    -ms-transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    left: 10%;
+    top: 10%; }
+  44% {
+    -ms-transform: rotate(1440deg);
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+    left: 70%;
+    top: 10%; }
+  55% {
+    -ms-transform: rotate(1800deg);
+    -webkit-transform: rotate(1800deg);
+    transform: rotate(1800deg);
+    left: 70%;
+    top: 10%;
+    opacity: 1; }
+  60% {
+    -ms-transform: rotate(2160deg);
+    -webkit-transform: rotate(2160deg);
+    transform: rotate(2160deg);
+    left: 70%;
+    top: 20%;
+    opacity: 0; }
+  100% {
+    left: 70%;
+    top: 20%;
+    opacity: 0; } }
+
+@keyframes cartoon_missile {
+  90% {
+    left: 70%;
+    top: 22.5%;
+    opacity: 1; }
+  95% {
+    left: 70%;
+    top: 32.5%;
+    opacity: 1; }
+  100% {
+    left: 70%;
+    top: 32.5%;
+    opacity: 0; } }
+
+@keyframes cartoon_boom_large {
+  30% {
+    left: 70%;
+    top: 20%;
+    height: 160px;
+    width: 160px;
+    opacity: 1;
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  100% {
+    top: 40%;
+    opacity: 0; } }
+
+@keyframes cartoon_energy_shot_1 {
+  95% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    top: 100%;
+    opacity: 1; }
+  100% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    top: 100%;
+    opacity: 0; } }
+
+@keyframes cartoon_energy_shot_2 {
+  95% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 0;
+    top: 80%;
+    opacity: 1; }
+  100% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 0;
+    top: 80%;
+    opacity: 0; } }
+
+@keyframes cartoon_energy_shot_3 {
+  95% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 90%;
+    top: 10%;
+    opacity: 1; }
+  100% {
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    left: 90%;
+    top: 10%;
+    opacity: 0; } }
+
+#labyrinth_control {
+  margin-top: 50px; }
+
+#labyrinth {
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  margin: 50px auto 0; }
+
+#labyrinth .square {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left; }
+
+#labyrinth .br_0 {
+  border-top: 1px solid #000; }
+
+#labyrinth .br_1 {
+  border-bottom: 1px solid #000; }
+
+#labyrinth .br_2 {
+  border-left: 1px solid #000; }
+
+#labyrinth .br_3 {
+  border-right: 1px solid #000; }
+
+#labyrinth .top {
+  border-top: 1px solid #000; }
+
+#labyrinth .bottom {
+  border-bottom: 1px solid #000; }
+
+#labyrinth .left {
+  border-left: 1px solid #000; }
+
+#labyrinth .right {
+  border-right: 1px solid #000; }
+
+#students_marks {
+  max-width: 600px;
+  margin: 50px auto 0; }
+
+#students_marks table {
+  text-align: center;
+  border: 1px solid #efefef; }
+
+#students_marks table td {
+  padding: 5px;
+  border: 1px solid #efefef; }
+
+#students_marks table td.failed {
+  color: red; }
+
+#students_marks label {
+  font-weight: normal; }
+
+#students_marks #marks .student_name_form {
+  padding-top: 20px; }
+
+#students_marks #marks .student_name_form .student_name {
+  padding-bottom: 5px; }
+
+#students_marks #marks button {
+  margin-top: 20px; }
+
+#lock_wrapper {
+  max-width: 600px;
+  min-height: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 200; }
+
+#lock_wrapper img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -256px;
+  margin-top: 168px; }
+
+#lock_wrapper #upper_lock {
+  margin-top: 0; }
+
+#lock_wrapper #upper_lock.open {
+  animation-name: lock-open;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; }
+
+@keyframes lock-open {
+  100% {
+    margin-top: -30px; } }
+
+#lock_wrapper #lock_container {
+  position: relative;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: 175px; }
+
+#lock_wrapper #lock_container #input_label {
+  width: 100%;
+  color: #fff;
+  margin: 0; }
+
+#lock_wrapper #lock_container #input_label span {
+  display: block;
+  text-align: center;
+  padding: 10px; }
+
+#lock_wrapper #lock_container #input_label #number_input {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #2980b9;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid; }
+
+#lock_wrapper #lock_container #input_label #number_input:focus {
+  outline: none; }
+
+#lock_wrapper #lock_container #lock_numbers .number_key, #lock_wrapper #lock_container #lock_numbers .remove_key {
+  float: left;
+  width: 33.33333%;
+  height: 50px;
+  background: #fff;
+  line-height: 50px;
+  text-align: center;
+  color: #2980b9; }
+
+#lock_wrapper #lock_container #lock_numbers .number_key:hover, #lock_wrapper #lock_container #lock_numbers .remove_key:hover {
+  cursor: pointer;
+  color: #20638f; }
+
+#lock_wrapper #lock_container #lock_numbers .number_key:focus, #lock_wrapper #lock_container #lock_numbers .remove_key:focus {
+  outline: none;
+  color: #164666; }
+
+#lock_wrapper #lock_container #lock_numbers .remove_key {
+  color: #c0392b; }
+
+#lock_wrapper #lock_container #lock_numbers .remove_key:hover {
+  color: #962d22; }
+
+#lock_wrapper #lock_container #lock_numbers .remove_key:focus {
+  outline: none;
+  color: #6d2018; }
+
+#lock_wrapper #lock_container #enter_button {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  color: #2980b9;
+  border: none;
+  border-bottom: 2px solid #2980b9; }
+
+#lock_wrapper #lock_container #enter_button:hover {
+  color: #20638f;
+  border-bottom: 2px solid #20638f; }
+
+#lock_wrapper #lock_container #enter_button:focus {
+  outline: none;
+  color: #164666;
+  border-bottom: 2px solid #164666; }
+
+#lock_wrapper #lock_container.animated {
+  animation-name: shake-lock;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards; }
+
+@keyframes shake-lock {
+  25% {
+    margin-left: -145px; }
+  50% {
+    margin-left: -155px; }
+  75% {
+    margin-left: -145px; }
+  100% {
+    margin-left: -150px; } }
+
+#lock_wrapper #lock_container.hidden-lock {
+  animation-name: hide-lock;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes hide-lock {
+  100% {
+    opacity: 0; } }
+
+@media all and (max-width: 640px) {
+  #lock_wrapper #lock_container #input_label {
+    color: #2980b9; }
+  #lock_wrapper img {
+    left: 50%;
+    width: 128px;
+    margin-left: -64px;
+    margin-top: 70px; }
+  #lock_wrapper #upper_lock {
+    margin-top: 30px; }
+  @keyframes lock-open {
+    100% {
+      margin-top: 15px; } }
+  #lock_wrapper #lock_container {
+    margin-top: 150px; } }
+
+/*# sourceMappingURL=main.css.map */

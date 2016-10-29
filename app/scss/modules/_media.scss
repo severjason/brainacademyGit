@@ -1,5 +1,35 @@
-@media all and (max-width: 768px) {
+@media all and (max-width: 640px) {
+
+  #lock_wrapper {
+    #lock_container {
+      #input_label {
+        color: $main_lock_color;
+      }
+    }
 
 
+    img {
+      left: 50%;
+      width: $img_lock_width / 4;
+      margin-left: - $img_lock_width / 8;
+      margin-top: 70px;
+    }
 
+    #upper_lock {
+      margin-top: 30px;
+      &.open {
+
+        @keyframes lock-open {
+          100% {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    #lock_container {
+      margin-top: $lock_width / 2;
+    }
+
+  } // #lock_wrapper
 }

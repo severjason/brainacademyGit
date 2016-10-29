@@ -26,9 +26,7 @@
                 quantityPerSide = document.querySelector("#labyrinth_level option:checked").dataset.level;
 
                 createLabArray();
-                //console.table(labArray);
                 fixLabArray();
-                //console.table(labArray);
                 for (let i = 0; i < quantityPerSide; i++) {
 
                     //let newTr = document.createElement("tr");
@@ -195,8 +193,35 @@
 
         });
 
+        let tabsArray = document.querySelectorAll("ul.nav-tabs li");
 
-        document.querySelectorAll("ul.nav-tabs li").forEach(function (li) {
+        for (let i = 0, tabsLength = tabsArray.length; i < tabsLength; i++) {
+            tabsArray[i].addEventListener("click", function () {
+
+                document.querySelectorAll("nav li").forEach(function (li) {
+                    li.classList.remove("active")
+                });
+
+                this.classList.add("active");
+
+                let page = this.dataset.page;
+
+                let defDiv = document.getElementById("default");
+
+                if (page != undefined) {
+                    defDiv.style.display = "none";
+                    labyrinth.ajaxLoad(page);
+                }
+                else {
+                    document.getElementById("main_content").innerHTML = "";
+                    defDiv.style.display = "block";
+                }
+
+            })
+        }
+
+
+        /*document.querySelectorAll("ul.nav-tabs li").forEach(function (li) {
 
             li.addEventListener("click", function () {
 
@@ -220,7 +245,7 @@
                 }
 
             })
-        });
+        });*/
         
     });
 

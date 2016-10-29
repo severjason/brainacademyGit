@@ -35,13 +35,16 @@ gulp.task('browserSync', function () {
  *  All paths
  */
 gulp.task('css', function () {
-    return gulp.src(path.scss).pipe($.sourcemaps.init()).pipe($.compass({
+    return gulp.src(path.scss).pipe($.sourcemaps.init()).pipe($.plumber())
+    /*.pipe($.compass({
         config_file: './config.rb',
         css: path.app + '/css',
         sass: path.app + '/scss'
-    }))
+    }))*/
     //.pipe($.sass({outputStyle: 'expanded'}))
-    .pipe($.sass({ outputStyle: 'compressed' })).on('error', $.sass.logError).pipe($.sourcemaps.write('.')).pipe(gulp.dest(path.app + '/css')).pipe(browserSync.reload({
+    .pipe($.sass({ outputStyle: 'compressed' })).pipe($.sass.sync().on('error', $.sass.logError)).pipe($.sourcemaps.write('.'))
+    //.pipe($.plumber.stop())
+    .pipe(gulp.dest(path.app + '/css')).pipe(browserSync.reload({
         stream: true
     }));
 });

@@ -1,4 +1,5 @@
 .space_wrap {
+
   padding: 50px;
   background: url("../images/space_texture.png") center;
 
@@ -31,10 +32,10 @@
 
 .space {
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   position: relative;
   height: $space_ship_height * $space_grid;
+  //width: 800px;
 
   img {
     max-height: 100%;
@@ -58,7 +59,7 @@
 
   .bad_space_ship {
     position: absolute;
-    width: percentage($space_grid/100);
+    width: $bad_ship_height;
     height: $bad_ship_height;
     left: - 4 * $bad_ship_height;
     top: 0;
@@ -71,7 +72,7 @@
 
   .space_ship {
     position: absolute;
-    width: percentage($space_grid/100);
+    width:  $space_ship_height;
     height: $space_ship_height;
     left: - 5 * $space_ship_height;
     top: 0;
@@ -94,14 +95,15 @@
   }  //.boom
 
   .boom_large {
-    top: 30%;
+    left: 70%;
+    top: 20%;
     width: percentage($space_grid/100);
-    height: 0.5 * $bad_ship_height;
+    height: percentage($space_grid/100);
     animation-duration: $animation_duration / 2;
   }  //.boom_large
 
   .energy_shot {
-    width: percentage($space_grid/100);
+    width: $bad_ship_height;
     height: $bad_ship_height;
     position: absolute;
     opacity: 0;
@@ -280,14 +282,17 @@
 
   @keyframes cartoon_boom_large {
     30% {
-      top: 10%;
+      left: 70%;
+      top: 20%;
       height: 2 * $bad_ship_height;
+      width: 2 * $bad_ship_height;
       opacity: 1;
       -ms-transform: rotate(30deg); /* IE 9 */
       -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
       transform: rotate(30deg);
     }
     100% {
+      top: 40%;
       opacity: 0;
     }
 

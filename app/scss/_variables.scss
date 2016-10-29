@@ -13,7 +13,7 @@ $form_radius: 1px;
 
 // for my grid
 
-$my_columns:20 !default;
+$my_columns: 20 !default;
 $my_grid_gutter_width: 6px !default;
 
 
@@ -27,12 +27,27 @@ $secondary_background:white;
 
 
 // animation
+$space_ship_height: 40px;
+$space_grid: 10;
+$animation_duration: 10s;
+$bad_ship_height: 80px;
 
 
-$space_ship_height:40px;
-$space_grid:10;
+//lock
+$lock_width: 300px;
+$key_width: 100% / 3;
+$key_height: 50px;
 
-$animation_duration:10s;
+$img_lock_width: 512px;
 
+$main_lock_background:white;
 
-$bad_ship_height:80px;
+$label_color: white;
+$main_lock_color:#2980b9;
+
+$lock_border: none;
+$lock_button_color: #2980b9;
+$lock_button_border: 2px solid;
+
+$lock_remove_key_color: #c0392b;
+$lock_remove_key_border: 1px solid;

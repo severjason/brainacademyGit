@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Page Title</title>
+    <title>BA - Sergey Severynov</title>
 
     <meta name="description" content="">
     <meta name="language" content="en-us"/>
@@ -45,7 +45,47 @@
 <div id="default">
 
 
-    <div id="lock_container" class="container container-fluid">
+    <div id="lock_wrapper" class="container container-fluid">
+        <img src="images/upper_lock_blue.png" alt="upper_lock" id="upper_lock">
+        <img src="images/lock_body_blue.png" alt="lock_body" id="lock_body">
+<!--        <div id="success">
+            Success!
+        </div>-->
+
+        <div id="lock_container" class="noselect">
+            <div class="lock_element">
+                <label id="input_label">
+                    <span>Enter pin (3 numbers)</span>
+                    <input id="number_input" type="password" maxlength="3">
+                </label>
+            </div>
+            <div id="lock_numbers" >
+                <div class="number_key">1</div>
+                <div class="number_key">2</div>
+                <div class="number_key">3</div>
+                <div class="number_key">4</div>
+                <div class="number_key">5</div>
+                <div class="number_key">6</div>
+                <div class="number_key">7</div>
+                <div class="number_key">8</div>
+                <div class="number_key">9</div>
+                <div id="clear_input" class="remove_key">
+                    Clear
+                </div>
+                <div class="number_key">9</div>
+                <div id="delete_number" class="remove_key">
+                    Del
+                </div>
+                <div class="clear">
+
+                </div>
+            </div>
+
+            <div class="lock_element">
+                <button id="enter_button">Enter</button>
+            </div>
+        </div>
+
 
     </div>
 

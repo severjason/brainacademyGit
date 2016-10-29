@@ -1,7 +1,196 @@
-#lock_container {
-  max-width: 800px;
-  min-height: 700px;
+#lock_wrapper {
+  max-width: 600px;
+  min-height: 600px;
   margin: 0 auto;
-  border: 1px solid #efefef;
+  font-size: 20px;
+  font-weight: 200;
+
+  /*#success {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 170px;
+    color: #27ae60;
+    font-size: 26px;
+    line-height: 50px;
+    text-align: center;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
+  }*/
+
+  img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: - $img_lock_width / 2;
+    margin-top: 168px;
+  }
+
+  #upper_lock {
+    margin-top: 0;
+
+    &.open {
+
+      animation-name: lock-open;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+
+      @keyframes lock-open {
+        100% {
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+
+  #lock_container {
+    position: relative;
+    left: 50%;
+    width: $lock_width;
+    margin-left: - $lock_width / 2;
+    margin-top: 175px;
+
+
+
+    #input_label {
+      width: 100%;
+      color: $label_color;
+      margin: 0;
+
+      span {
+        display: block;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #number_input {
+        width: 100%;
+        height: $key_height;
+        line-height: $key_height;
+        color: $main_lock_color;
+        text-align: center;
+        border: $lock_border;
+        border-bottom: $lock_button_border;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+    }
+    // #input_label
+
+    #lock_numbers {
+
+      /*border-left: 1px solid black;
+      border-right: 1px solid black;*/
+
+
+      %key {
+        float: left;
+        width: $key_width;
+        height: $key_height;
+        background: $main_lock_background;
+        line-height: $key_height;
+        text-align: center;
+        color: $lock_button_color;
+
+        &:hover {
+          cursor: pointer;
+          color: darken($lock_button_color, 10%);
+        }
+
+        &:focus{
+          outline: none;
+          color: darken($lock_button_color, 20%);
+        }
+      }
+
+      .number_key {
+        @extend %key;
+      }
+      .remove_key {
+        @extend %key;
+        color: $lock_remove_key_color;
+
+        &:hover {
+          color: darken($lock_remove_key_color, 10%);
+        }
+
+        &:focus{
+          outline: none;
+          color: darken($lock_remove_key_color, 20%);
+        }
+      }
+
+    }
+    // #lock_numbers
+
+    #enter_button {
+      width: 100%;
+      height: $key_height;
+      background: $main_lock_background;
+      color: $lock_button_color;
+      border: none;
+      border-bottom: $lock_button_border + $lock_button_color;
+
+      &:hover {
+        color: darken($lock_button_color, 10%);
+        border-bottom: $lock_button_border + darken($lock_button_color, 10%);
+      }
+
+      &:focus{
+        outline: none;
+        color: darken($lock_button_color, 20%);
+        border-bottom: $lock_button_border + darken($lock_button_color, 20%);
+      }
+    }
+    // #enter_button
+    &.animated {
+      animation-name: shake-lock;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+
+
+      @keyframes shake-lock {
+        25% {
+          margin-left:5 - $lock_width/2;
+        }
+        50% {
+          margin-left:-5 - $lock_width/2;
+        }
+        75% {
+          margin-left:5 - $lock_width/2;
+        }
+        100% {
+          margin-left: - $lock_width/2;
+        }
+      }
+
+    } //.animated
+
+    &.hidden-lock {
+      animation-name: hide-lock;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+
+      @keyframes hide-lock {
+        100% {
+          opacity: 0;
+        }
+      }
+
+    }
+
+
+  }
+  // #lock_container
 
 }
+
+// #lock_wrapper
