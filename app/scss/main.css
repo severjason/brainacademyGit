@@ -478,7 +478,7 @@ footer {
     display: block;
     position: absolute;
     left: 50%;
-    margin-left: -256px;
+    margin-left: -140px;
     margin-top: 168px; }
   #lock_wrapper #upper_lock {
     margin-top: 0; }
@@ -571,20 +571,41 @@ footer {
 @keyframes hide-lock {
   100% {
     opacity: 0; } }
+/*
 @media all and (max-width: 640px) {
-  #lock_wrapper #lock_container #input_label {
-    color: #2980b9; }
-  #lock_wrapper img {
-    left: 50%;
-    width: 128px;
-    margin-left: -64px;
-    margin-top: 70px; }
-  #lock_wrapper #upper_lock {
-    margin-top: 30px; }
-  @keyframes lock-open {
-    100% {
-      margin-top: 15px; } }
-  #lock_wrapper #lock_container {
-    margin-top: 150px; } }
+
+  #lock_wrapper {
+    #lock_container {
+      #input_label {
+        color: $main_lock_color;
+      }
+    }
+
+
+    img {
+      left: 50%;
+      width: $img_lock_width / 4;
+      margin-left: - $img_lock_width / 8;
+      margin-top: 70px;
+    }
+
+    #upper_lock {
+      margin-top: 30px;
+      &.open {
+
+        @keyframes lock-open {
+          100% {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    #lock_container {
+      margin-top: $lock_width / 2;
+    }
+
+  } // #lock_wrapper
+}*/
 
 /*# sourceMappingURL=main.css.map */

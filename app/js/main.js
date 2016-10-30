@@ -57,7 +57,7 @@
             };
             this.ajaxLoad = function (page) {
 
-                if (page != undefined) {
+                if (page !== undefined) {
 
                     mainContent.innerHTML = "";
 
@@ -198,9 +198,15 @@
         for (let i = 0, tabsLength = tabsArray.length; i < tabsLength; i++) {
             tabsArray[i].addEventListener("click", function () {
 
-                document.querySelectorAll("nav li").forEach(function (li) {
+                let navLiArray = document.querySelectorAll("nav li");
+
+                for(let i = 0, navLiArrayLength = navLiArray.length; i < navLiArrayLength; i++){
+                    navLiArray[i].classList.remove("active");
+                }
+
+                /*document.querySelectorAll("nav li").forEach(function (li) {
                     li.classList.remove("active")
-                });
+                });*/
 
                 this.classList.add("active");
 

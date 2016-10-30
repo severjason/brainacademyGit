@@ -39,30 +39,30 @@
             //let successID = document.getElementById("success");
 
             return {
-                shake:function () {
+                shake: function () {
                     lockId.classList.add("animated");
 
                     setTimeout(function () {
                         lockId.classList.toggle("animated");
                     }, 200);
                 },
-                open:function () {
+                open: function () {
                     upperLock.classList.add("open");
                     //successID.classList.toggle("show");
                     return this;
                 },
-                isOpen:function () {
+                isOpen: function () {
                     return upperLock.classList.contains("open");
                 },
-                close:function () {
+                close: function () {
                     upperLock.classList.toggle("open");
                 },
-                hide:function () {
+                hide: function () {
                     lockId.classList.add("hidden-lock");
 
                     setTimeout(function () {
                         lockId.classList.add("hidden");
-                    },1000);
+                    }, 1000);
                 }
             }
         };
@@ -78,7 +78,7 @@
                 //lock.hide();
             }
             else {
-                if(!lock.isOpen()) {
+                if (!lock.isOpen()) {
 
                     input.clear();
                     lock.shake();
@@ -95,9 +95,6 @@
                 }
             }
         };
-
-
-
 
 
         document.querySelector("body").addEventListener("click", function (event) {

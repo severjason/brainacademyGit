@@ -465,7 +465,7 @@ footer p.copyright {
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -256px;
+  margin-left: -140px;
   margin-top: 168px; }
 
 #lock_wrapper #upper_lock {
@@ -576,21 +576,5 @@ footer p.copyright {
 @keyframes hide-lock {
   100% {
     opacity: 0; } }
-
-@media all and (max-width: 640px) {
-  #lock_wrapper #lock_container #input_label {
-    color: #2980b9; }
-  #lock_wrapper img {
-    left: 50%;
-    width: 128px;
-    margin-left: -64px;
-    margin-top: 70px; }
-  #lock_wrapper #upper_lock {
-    margin-top: 30px; }
-  @keyframes lock-open {
-    100% {
-      margin-top: 15px; } }
-  #lock_wrapper #lock_container {
-    margin-top: 150px; } }
 
 /*# sourceMappingURL=main.css.map */
