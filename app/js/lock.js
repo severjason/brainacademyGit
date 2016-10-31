@@ -2,9 +2,9 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        var Input = function () {
+        var Input = function (inputid) {
 
-            var inputId = document.getElementById("number_input");
+            var inputId = document.getElementById(inputid);
 
             const PIN = "512";
 
@@ -32,11 +32,10 @@
             }
         };
 
-        var Lock = function () {
+        var Lock = function (lockid, upperlockid) {
 
-            var lockId = document.getElementById("lock_container");
-            var upperLock = document.getElementById("upper_lock");
-            //let successID = document.getElementById("success");
+            var lockId = document.getElementById(lockid);
+            var upperLock = document.getElementById(upperlockid);
 
             return {
                 shake: function () {
@@ -48,8 +47,6 @@
                 },
                 open: function () {
                     upperLock.classList.add("open");
-                    //successID.classList.toggle("show");
-                    return this;
                 },
                 isOpen: function () {
                     return upperLock.classList.contains("open");
@@ -67,19 +64,18 @@
             }
         };
 
-        var input = new Input();
-        var lock = new Lock();
+        var input = new Input("number_input");
+        var lock = new Lock("lock_container", "upper_lock");
 
 
         var checkPIN = function () {
 
             if (input.PINisValid()) {
-                lock.open().hide();
-                //lock.hide();
+                lock.open();
+                lock.hide();
             }
             else {
                 if (!lock.isOpen()) {
-
                     input.clear();
                     lock.shake();
 
