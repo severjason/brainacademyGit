@@ -34,8 +34,8 @@
 
         var Lock = function () {
 
-            let lockId = document.getElementById("lock_container");
-            let upperLock = document.getElementById("upper_lock");
+            var lockId = document.getElementById("lock_container");
+            var upperLock = document.getElementById("upper_lock");
             //let successID = document.getElementById("success");
 
             return {
@@ -81,14 +81,14 @@
                     input.clear();
                     lock.shake();
 
-                    let keyArray = document.querySelectorAll(".number_key");
-                    let keyArrayLength = keyArray.length;
-                    let numbersDiv = document.getElementById("lock_numbers");
+                    var keyArray = document.querySelectorAll(".number_key");
+                    var keyArrayLength = keyArray.length;
+                    var numbersDiv = document.getElementById("lock_numbers");
 
-                    for (let i = 0; i < keyArrayLength; i++) {
+                    for (var i = 0; i < keyArrayLength; i++) {
                         numbersDiv.insertBefore(keyArray[i], keyArray[input.random(0, keyArrayLength - 1)]);
                     }
-                    let clearKey = document.getElementById("clear_input");
+                    var clearKey = document.getElementById("clear_input");
                     numbersDiv.insertBefore(clearKey, document.querySelectorAll(".number_key")[keyArrayLength - 1]);
                 }
             }
@@ -99,7 +99,7 @@
             var target = event.target;
 
             if (target.classList.contains("number_key")) {
-                let value = parseInt(target.innerHTML, 10);
+                var value = parseInt(target.innerHTML, 10);
                 input.insert(value);
             }
 
