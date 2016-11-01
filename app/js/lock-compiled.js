@@ -2,70 +2,135 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        var Input = function (inputid) {
+        /**
+         *
+         * @param inputId
+         * @returns {{insert: insert, clear: clear, del: del, PINisValid: PINisValid, random: random}}
+         * @constructor
+         */
+        var Input = function (inputId) {
 
-            var inputId = document.getElementById(inputid);
+            var input = document.getElementById(inputId);
 
             const PIN = "512";
 
             return {
+                /**
+                 * Inserts new value into input
+                 * @param newValue
+                 */
                 insert: function (newValue) {
-                    if (inputId.value.length < PIN.length) {
-                        inputId.value += "" + newValue;
+                    if (input.value.length < PIN.length) {
+                        input.value += "" + newValue;
                     }
                 },
+                /**
+                 * Clears input
+                 */
                 clear: function () {
-                    inputId.value = "";
+                    input.value = "";
                 },
+                /**
+                 * Delete last number in the input
+                 */
                 del: function () {
-                    inputId.value = inputId.value.slice(0, -1);
+                    input.value = input.value.slice(0, -1);
                 },
                 /**
                  * @return {boolean}
                  */
                 PINisValid: function () {
-                    return inputId.value === PIN;
+                    return input.value === PIN;
                 },
+                /**
+                 *
+                 * @param min
+                 * @param max
+                 * @returns {number}
+                 */
                 random: function (min, max) {
                     return Math.floor(min + Math.random() * (max - min + 1));
                 }
             };
         };
 
-        var Lock = function (lockid, upperlockid) {
+        /**
+         *
+         * @param lockId
+         * @param upperLockId
+         * @param alertId
+         * @param labelTextId
+         * @returns {{shake: shake, open: open, isOpen: isOpen, close: close, hide: hide, showAlert: showAlert}}
+         * @constructor
+         */
+        var Lock = function (lockId, upperLockId, alertId, labelTextId) {
 
-            var lockId = document.getElementById(lockid);
-            var upperLock = document.getElementById(upperlockid);
+            var lock = document.getElementById(lockId);
+            var upperLock = document.getElementById(upperLockId);
+            var alert = document.getElementById(alertId);
+            var labelText = document.getElementById(labelTextId);
+            var timeout = 0;
 
             return {
+                /**
+                 * Shakes lock
+                 */
                 shake: function () {
-                    lockId.classList.add("animated");
+                    lock.classList.add("animated");
 
                     setTimeout(function () {
-                        lockId.classList.toggle("animated");
+                        lock.classList.toggle("animated");
                     }, 200);
                 },
+                /**
+                 * Opens lock
+                 */
                 open: function () {
                     upperLock.classList.add("open");
                 },
+                /**
+                 * Check if lock is open
+                 * @returns {boolean}
+                 */
                 isOpen: function () {
                     return upperLock.classList.contains("open");
                 },
+                /**
+                 * Closes lock
+                 */
                 close: function () {
                     upperLock.classList.toggle("open");
                 },
+                /**
+                 * Hides lock numbers
+                 */
                 hide: function () {
-                    lockId.classList.add("hidden-lock");
+                    lock.classList.add("hidden-lock");
 
                     setTimeout(function () {
-                        lockId.classList.add("hidden");
+                        lock.classList.add("hidden");
+                    }, 1000);
+                },
+                /**
+                 * Shows alert, hides label for 1s
+                 */
+                showAlert: function () {
+
+                    clearTimeout(timeout);
+
+                    alert.classList.add("show");
+                    labelText.classList.add("hideText");
+
+                    timeout = setTimeout(function () {
+                        alert.classList.remove("show");
+                        labelText.classList.remove("hideText");
                     }, 1000);
                 }
             };
         };
 
         var input = new Input("number_input");
-        var lock = new Lock("lock_container", "upper_lock");
+        var lock = new Lock("lock_container", "upper_lock", "alert", "label_text");
 
         var checkPIN = function () {
 
@@ -76,6 +141,7 @@
                 if (!lock.isOpen()) {
                     input.clear();
                     lock.shake();
+                    lock.showAlert();
 
                     var keyArray = document.querySelectorAll(".number_key");
                     var keyArrayLength = keyArray.length;

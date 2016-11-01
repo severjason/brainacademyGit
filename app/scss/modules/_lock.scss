@@ -5,23 +5,26 @@
   font-size: 20px;
   font-weight: 200;
 
-  /*#success {
+  #alert {
     position: absolute;
-    width: 200px;
-    height: 50px;
+    width: $alert_width;
+    height: $alert_height;
     left: 50%;
-    margin-left: -100px;
-    margin-top: 170px;
-    color: #27ae60;
-    font-size: 26px;
-    line-height: 50px;
+    margin-left: - $alert_width/2;
+    margin-top: 178px;
+    background: none;
+    color: lighten($lock_remove_key_color,15%);
+    font-weight: bold;
+    line-height: $alert_height;
     text-align: center;
     opacity: 0;
 
     &.show {
       opacity: 1;
     }
-  }*/
+  }
+
+
 
   img {
     display: block;
@@ -57,15 +60,22 @@
 
 
 
+
+
     #input_label {
       width: 100%;
       color: $label_color;
       margin: 0;
 
-      span {
+      #label_text {
         display: block;
         text-align: center;
         padding: 10px;
+        opacity: 1;
+
+        &.hideText {
+          opacity: 0;
+        }
       }
 
       #number_input {

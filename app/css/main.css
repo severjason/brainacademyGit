@@ -461,6 +461,23 @@ footer p.copyright {
   font-size: 20px;
   font-weight: 200; }
 
+#lock_wrapper #alert {
+  position: absolute;
+  width: 230px;
+  height: 40px;
+  left: 50%;
+  margin-left: -115px;
+  margin-top: 178px;
+  background: none;
+  color: #db695d;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0; }
+
+#lock_wrapper #alert.show {
+  opacity: 1; }
+
 #lock_wrapper img {
   display: block;
   position: absolute;
@@ -492,10 +509,14 @@ footer p.copyright {
   color: #fff;
   margin: 0; }
 
-#lock_wrapper #lock_container #input_label span {
+#lock_wrapper #lock_container #input_label #label_text {
   display: block;
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  opacity: 1; }
+
+#lock_wrapper #lock_container #input_label #label_text.hideText {
+  opacity: 0; }
 
 #lock_wrapper #lock_container #input_label #number_input {
   width: 100%;
