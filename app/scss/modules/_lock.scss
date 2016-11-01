@@ -13,7 +13,7 @@
     margin-left: - $alert_width/2;
     margin-top: 178px;
     background: none;
-    color: lighten($lock_remove_key_color,15%);
+    color: $lock_remove_key_color;
     font-weight: bold;
     line-height: $alert_height;
     text-align: center;
