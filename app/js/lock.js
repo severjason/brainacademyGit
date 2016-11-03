@@ -10,8 +10,6 @@
          */
         var Input = function (inputId) {
 
-            var input = document.getElementById(inputId);
-
             const PIN = "512";
 
             return {
@@ -20,6 +18,8 @@
                  * @param newValue
                  */
                 insert: function (newValue) {
+                    let input = document.getElementById(inputId);
+
                     if (input.value.length < PIN.length) {
                         input.value += "" + newValue;
                     }
@@ -28,19 +28,19 @@
                  * Clears input
                  */
                 clear: function () {
-                    input.value = "";
+                    document.getElementById(inputId).value = "";
                 },
                 /**
                  * Delete last number in the input
                  */
                 del: function () {
-                    input.value = input.value.slice(0, -1);
+                    document.getElementById(inputId).value = document.getElementById(inputId).value.slice(0, -1);
                 },
                 /**
                  * @return {boolean}
                  */
                 PINisValid: function () {
-                    return input.value === PIN;
+                    return document.getElementById(inputId).value === PIN;
                 },
                 /**
                  *
@@ -65,10 +65,6 @@
          */
         var Lock = function (lockId, upperLockId, alertId, labelTextId) {
 
-            var lock = document.getElementById(lockId);
-            var upperLock = document.getElementById(upperLockId);
-            var alert = document.getElementById(alertId);
-            var labelText = document.getElementById(labelTextId);
             var timeout = 0;
 
             return {
@@ -76,6 +72,8 @@
                  * Shakes lock
                  */
                 shake: function () {
+                    let lock = document.getElementById(lockId);
+
                     lock.classList.add("animated");
 
                     setTimeout(function () {
@@ -86,25 +84,26 @@
                  * Opens lock
                  */
                 open: function () {
-                    upperLock.classList.add("open");
+                    document.getElementById(upperLockId).classList.add("open");
                 },
                 /**
                  * Check if lock is open
                  * @returns {boolean}
                  */
                 isOpen: function () {
-                    return upperLock.classList.contains("open");
+                    return document.getElementById(upperLockId).classList.contains("open");
                 },
                 /**
                  * Closes lock
                  */
                 close: function () {
-                    upperLock.classList.toggle("open");
+                    document.getElementById(upperLockId).classList.toggle("open");
                 },
                 /**
                  * Hides lock numbers
                  */
                 hide: function () {
+                    let lock = document.getElementById(lockId);
                     lock.classList.add("hidden-lock");
 
                     setTimeout(function () {
@@ -115,6 +114,9 @@
                  * Shows alert, hides label for 1s
                  */
                 showAlert: function () {
+
+                    let alert = document.getElementById(alertId);
+                    let labelText = document.getElementById(labelTextId);
 
                     clearTimeout(timeout);
 
