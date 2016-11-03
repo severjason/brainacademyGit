@@ -29,8 +29,6 @@
                 fixLabArray();
                 for (let i = 0; i < quantityPerSide; i++) {
 
-                    //let newTr = document.createElement("tr");
-
                     for (let j = 0; j < quantityPerSide; j++) {
 
                         let newDiv = document.createElement("div");
@@ -40,10 +38,6 @@
                         let CSS = {
                             "width": Math.floor(labWidth / quantityPerSide) + "px",
                             "height": Math.floor(labWidth / quantityPerSide) + "px"
-                       /*     "marginTop": - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
-                            "marginRight": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px",
-                            "marginBottom":  - (+newDiv.classList.contains("top") + newDiv.classList.contains("bottom")) + "px",
-                            "marginLeft": - (+newDiv.classList.contains("left") + newDiv.classList.contains("right")) + "px"*/
                         };
                         for (let attribute in CSS) {
 
@@ -203,10 +197,6 @@
                 for(let i = 0, navLiArrayLength = navLiArray.length; i < navLiArrayLength; i++){
                     navLiArray[i].classList.remove("active");
                 }
-
-                /*document.querySelectorAll("nav li").forEach(function (li) {
-                    li.classList.remove("active")
-                });*/
 
                 this.classList.add("active");
 
