@@ -598,11 +598,47 @@ footer p.copyright {
   100% {
     opacity: 0; } }
 
-#reg_exp_container {
-  max-width: 800px;
+#refresh_button_container {
+  max-width: 410px;
   margin: 0 auto; }
 
-#reg_exp_container .title {
-  font-weight: bold; }
+#refresh_button_container button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto; }
+
+#pushpuzzle_table {
+  position: relative;
+  max-width: 410px;
+  margin: 0 auto;
+  border: 1px solid #efefef; }
+
+#pushpuzzle_table:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden; }
+
+#pushpuzzle_table div {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  text-align: center;
+  color: #ecf0f1;
+  font-size: 24px;
+  line-height: 100px;
+  background: #34495e; }
+
+#pushpuzzle_table div.empty {
+  border: none;
+  background: none; }
+
+#pushpuzzle_table div.active:not(.empty) {
+  background: #2c3e50; }
+
+#pushpuzzle_table div:hover {
+  cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

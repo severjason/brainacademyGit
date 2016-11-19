@@ -29,3 +29,24 @@ function compareArray(arr1, arr2) {
 }
 var source = [1,2,3,[4,7]];
 
+
+function urlArgs(query) {
+    var args = {};
+    //var query = location.search.substring(1);
+    var pairs = query.split("&");
+
+    for (var i = 0; i < pairs.length; i++) {
+        var pos = pairs[i].indexOf('=');
+            if (pos == -1) continue;
+        var name = pairs[i].substring(0, pos);
+        var value = pairs[i].substring(pos + 1);
+        value = decodeURIComponent(value);
+        args[name] = value;
+    }
+
+    return args;
+}
+
+var args = urlArgs(location.search.substring(1));
+var q = args.q || "";
+var n = args.n ? parseInt(args.n):10;

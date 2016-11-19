@@ -1,0 +1,51 @@
+#refresh_button_container{
+  max-width: ($puzzle_width +  2 * $puzzle_margin) * $puzzle_quantity + 2 * $puzzle_container_border_width;
+  margin: 0 auto;
+
+  button {
+    display: block;
+    width: 2 * $puzzle_width;
+    height: $puzzle_height / 2;
+    margin: 20px auto;
+  }
+
+}
+
+#pushpuzzle_table {
+  position: relative;
+  max-width: ($puzzle_width +  2 * $puzzle_margin) * $puzzle_quantity + 2 * $puzzle_container_border_width;
+  margin: 0 auto;
+  border: $puzzle_container_border_width solid $puzzle_container_border_color;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
+
+  div {
+    float: left;
+    width: $puzzle_width;
+    height: $puzzle_height;
+    margin: $puzzle_margin;
+    text-align: center;
+    color: $puzzle_font_color;
+    font-size: $puzzle_font_size;
+    line-height: $puzzle_height;
+    background: $puzzle_background;
+
+    &.empty {
+      border: none;
+      background: none;
+    }
+
+    &.active:not(.empty) {
+      background: $puzzle_background_active;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

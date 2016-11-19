@@ -47,29 +47,32 @@
 </nav>
 <div id="default">
 
-    <div id="reg_exp_container">
-        <p class="text-center title"> Log file</p>
-        <p id="log_file_text">
-            127.0.0.1 - - [31/Aug/2016:12:19:49 +0300] "GET / HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux i686)
-            AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36" <br>
-            127.0.0.1 - - [31/Aug/2016:12:19:49 +0300] "GET / HTTP/1.1" 200 3010 "-" "Mozilla/5.0 (X11; Linux i686)
-            AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"<br>
-            127.0.0.1 - - [31/Aug/2016:12:19:50 +0300] "GET /components/AdminLTE/dist/css/AdminLTE.min.css HTTP/1.1"
-            304 0 "http://usdbank.local/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko)
-            Chrome/47.0.2526.111 Safari/537.36"<br>
-            127.0.0.1 - - [31/Aug/2016:12:19:50 +0300] "GET /css/app.css HTTP/1.1" 304 0 "http://usdbank.local/"
-            "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"<br>
-            127.0.0.1 - - [31/Aug/2016:12:19:50 +0300] "GET /components/ionicons/css/ionicons.min.css HTTP/1.1"
-            404 596 "http://usdbank.local/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko)
-            Chrome/47.0.2526.111 Safari/537.36"<br>
-        </p>
-        <br>
-        <p class="text-center title">Result</p>
-        <p id="result"></p>
+
+    <div id="pushpuzzle_table" class="noselect">
+        <div class="puzzle empty"></div>
+        <div class="puzzle">1</div>
+        <div class="puzzle">2</div>
+        <div class="puzzle">3</div>
+        <div class="puzzle">4</div>
+        <div class="puzzle">5</div>
+        <div class="puzzle">6</div>
+        <div class="puzzle">7</div>
+        <div class="puzzle">8</div>
+        <div class="puzzle">9</div>
+        <div class="puzzle">10</div>
+        <div class="puzzle">11</div>
+        <div class="puzzle">12</div>
+        <div class="puzzle">13</div>
+        <div class="puzzle">14</div>
+        <div class="puzzle">15</div>
+
     </div>
+    <div class="clear">
 
-
-
+    </div>
+    <div id="refresh_button_container">
+        <button id="refresh_button">Refresh</button>
+    </div>
 </div>
 
 <div id="main_content">
@@ -101,7 +104,7 @@
 <script src="js/main.js"></script>
 <script src="js/lock.js"></script>
 <script src="js/test.js"></script>
-<script src="js/regexp.js"></script>
+<script src="js/push_puzzle.js"></script>
 <!-- endbuild -->
 </body>
 </html>
