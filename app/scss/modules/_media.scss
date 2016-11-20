@@ -1,36 +1,15 @@
-/*
+
 @media all and (max-width: 640px) {
 
-  #lock_wrapper {
-    #lock_container {
-      #input_label {
-        color: $main_lock_color;
-      }
+  #pushpuzzle_table{
+
+    max-width: ($media_puzzle_value * $puzzle_width +  2 * $puzzle_margin) * $puzzle_quantity + 2 * $puzzle_container_border_width;
+
+    .puzzle {
+      width: $media_puzzle_value * $puzzle_width;
+      height: $media_puzzle_value * $puzzle_height;
+      line-height: $media_puzzle_value * $puzzle_height;
     }
+  }
 
-
-    img {
-      left: 50%;
-      width: $img_lock_width / 4;
-      margin-left: - $img_lock_width / 8;
-      margin-top: 70px;
-    }
-
-    #upper_lock {
-      margin-top: 30px;
-      &.open {
-
-        @keyframes lock-open {
-          100% {
-            margin-top: 15px;
-          }
-        }
-      }
-    }
-
-    #lock_container {
-      margin-top: $lock_width / 2;
-    }
-
-  } // #lock_wrapper
-}*/
+}

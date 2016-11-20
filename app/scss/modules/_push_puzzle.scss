@@ -1,4 +1,4 @@
-#refresh_button_container{
+#refresh_button_container {
   max-width: ($puzzle_width +  2 * $puzzle_margin) * $puzzle_quantity + 2 * $puzzle_container_border_width;
   margin: 0 auto;
 
@@ -7,15 +7,43 @@
     width: 2 * $puzzle_width;
     height: $puzzle_height / 2;
     margin: 20px auto;
+    font-size: $puzzle_font_size;
+    color: $puzzle_button_color;
+    background: none;
+    border: 0;
+    border-bottom: $puzzle_button_border $puzzle_button_color;
+
+    &:hover {
+      color: darken($puzzle_button_color, 10%);
+      border-bottom: $puzzle_button_border + darken($puzzle_button_color, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
 }
+
+//#refresh_button_container
 
 #pushpuzzle_table {
   position: relative;
   max-width: ($puzzle_width +  2 * $puzzle_margin) * $puzzle_quantity + 2 * $puzzle_container_border_width;
   margin: 0 auto;
   border: $puzzle_container_border_width solid $puzzle_container_border_color;
+  overflow: hidden;
+
+  #you_won {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $puzzle_font_size * 2;
+    color: #2980b9;
+    background: white;
+    border: $puzzle_container_border_width solid white;
+  }
 
   &:after {
     content: "";
@@ -24,7 +52,7 @@
     visibility: hidden;
   }
 
-  div {
+  .puzzle {
     float: left;
     width: $puzzle_width;
     height: $puzzle_height;
@@ -44,7 +72,7 @@
       background: $puzzle_background_active;
     }
 
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }

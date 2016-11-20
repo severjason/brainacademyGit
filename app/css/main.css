@@ -606,13 +606,36 @@ footer p.copyright {
   display: block;
   width: 200px;
   height: 50px;
-  margin: 20px auto; }
+  margin: 20px auto;
+  font-size: 24px;
+  color: #34495e;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #34495e; }
+
+#refresh_button_container button:hover {
+  color: #22303d;
+  border-bottom: 2px solid #22303d; }
+
+#refresh_button_container button:focus {
+  outline: none; }
 
 #pushpuzzle_table {
   position: relative;
   max-width: 410px;
   margin: 0 auto;
-  border: 1px solid #efefef; }
+  border: 1px solid #efefef;
+  overflow: hidden; }
+
+#pushpuzzle_table #you_won {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 48px;
+  color: #2980b9;
+  background: white;
+  border: 1px solid #fff; }
 
 #pushpuzzle_table:after {
   content: "";
@@ -620,7 +643,7 @@ footer p.copyright {
   clear: both;
   visibility: hidden; }
 
-#pushpuzzle_table div {
+#pushpuzzle_table .puzzle {
   float: left;
   width: 100px;
   height: 100px;
@@ -631,14 +654,22 @@ footer p.copyright {
   line-height: 100px;
   background: #34495e; }
 
-#pushpuzzle_table div.empty {
+#pushpuzzle_table .puzzle.empty {
   border: none;
   background: none; }
 
-#pushpuzzle_table div.active:not(.empty) {
+#pushpuzzle_table .puzzle.active:not(.empty) {
   background: #2c3e50; }
 
-#pushpuzzle_table div:hover {
+#pushpuzzle_table .puzzle:hover {
   cursor: pointer; }
+
+@media all and (max-width: 640px) {
+  #pushpuzzle_table {
+    max-width: 310px; }
+  #pushpuzzle_table .puzzle {
+    width: 75px;
+    height: 75px;
+    line-height: 75px; } }
 
 /*# sourceMappingURL=main.css.map */
