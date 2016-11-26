@@ -165,7 +165,7 @@
 
             var target = event.target;
 
-            if (target.classList.contains("number_key")) {
+            if (target.className === "number_key") {
                 var value = parseInt(target.innerHTML, 10);
                 input.insert(value);
             }
