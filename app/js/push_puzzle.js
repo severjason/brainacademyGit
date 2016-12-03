@@ -3,15 +3,15 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-
         class PushPuzzle {
+            
             /**
              *
-             * @param container_id
-             * @param puzzle_class
-             * @param active_class
-             * @param empty_class
-             * @param you_won_class
+             * @param {string} container_id
+             * @param {string} puzzle_class
+             * @param {string} active_class
+             * @param {string} empty_class
+             * @param {string} you_won_class
              */
             constructor(container_id, puzzle_class, active_class, empty_class, you_won_class) {
                 this.containerId = container_id;
@@ -19,13 +19,12 @@
                 this.activeClass = active_class;
                 this.emptyClass = empty_class;
                 this.youWon = you_won_class;
-                this.container = document.getElementById(this.containerId);
             }
 
             /**
-             *
-             * @param node1
-             * @param node2
+             *  Swaps node1 and node2
+             * @param {object} node1
+             * @param {object} node2
              */
             static swapElements(node1, node2) {
 
@@ -45,9 +44,9 @@
             }
 
             /**
-             *
-             * @param min
-             * @param max
+             * Returns random number from min to max
+             * @param {number} min
+             * @param {number} max
              * @returns {number}
              */
             static random(min, max) {
@@ -56,8 +55,8 @@
 
             /**
              *
-             * @param node1
-             * @param node2
+             * @param {object} node1
+             * @param {object} node2
              * @returns {boolean}
              */
             static isOnTheSameRow(node1, node2) {
@@ -66,8 +65,8 @@
 
             /**
              *
-             * @param node1
-             * @param node2
+             * @param {object} node1
+             * @param {object} node2
              * @returns {boolean}
              */
             static isOnTheSameColumn(node1, node2) {
@@ -79,7 +78,7 @@
              */
             refresh() {
                 for (var i = 0; i < this.getPuzzleArray().length; i++) {
-                    this.container.insertBefore(this.getPuzzleArray()[i], this.getPuzzleArray()[PushPuzzle.random(0, this.getPuzzleArray().length - 1)])
+                    document.getElementById(this.containerId).insertBefore(this.getPuzzleArray()[i], this.getPuzzleArray()[PushPuzzle.random(0, this.getPuzzleArray().length - 1)])
                 }
             }
 
@@ -221,10 +220,11 @@
              */
             showYouWon() {
                 let youWon = document.getElementById(this.youWon);
+                let container = document.getElementById(this.containerId);
                 youWon.innerHTML = "You won!";
-                youWon.style.width = this.container.getBoundingClientRect().width + "px";
-                youWon.style.height = this.container.getBoundingClientRect().height + "px";
-                youWon.style.lineHeight = this.container.getBoundingClientRect().height + "px";
+                youWon.style.width = container.getBoundingClientRect().width + "px";
+                youWon.style.height = container.getBoundingClientRect().height + "px";
+                youWon.style.lineHeight = container.getBoundingClientRect().height + "px";
                 youWon.style.display = "block";
             }
 
@@ -246,7 +246,11 @@
         }
 
         var puzzle = new PushPuzzle("pushpuzzle_table", "puzzle", "active", "empty", "you_won");
-        puzzle.refresh();
+
+
+        document.addEventListener("pageLoaded", function () {
+            puzzle.refresh();
+        });
 
         document.querySelector("body").addEventListener("click", function (event) {
 

@@ -1,6 +1,3 @@
-/**
- * Created by sever on 03.11.16.
- */
 function flatArray(arr) {
 
     var newArray = [];
@@ -32,7 +29,6 @@ var source = [1,2,3,[4,7]];
 
 function urlArgs(query) {
     var args = {};
-    //var query = location.search.substring(1);
     var pairs = query.split("&");
 
     for (var i = 0; i < pairs.length; i++) {
@@ -50,3 +46,27 @@ function urlArgs(query) {
 var args = urlArgs(location.search.substring(1));
 var q = args.q || "";
 var n = args.n ? parseInt(args.n):10;
+
+var ajaxRequest = function (method, url) {
+
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open(method, url, true);
+
+    xhr.onload = function (e) {
+
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+            return xhr.responseText;
+        } else {
+            console.error(xhr.statusText);
+        }
+    };
+
+    xhr.send(null);
+
+};
+
+
+
